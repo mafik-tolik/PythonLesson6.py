@@ -16,9 +16,9 @@ print(f'{some_list1} => ')
 text1 = ''
 
 
-def minimum(some_list, start):
-    min = start
-    for i in range(some_list.index(start) + 1, len(some_list)):
+def minimum(some_list):
+    min = some_list[0]
+    for i in range(1, len(some_list)):
         if some_list1[i] < min:
             min = some_list1[i]
     return min
@@ -27,7 +27,7 @@ def minimum(some_list, start):
 while len(some_list1) != 0:
 
     maxx = some_list1[0]
-    minn = minimum(some_list1, some_list1[0])
+    minn = minimum(some_list1)
 
     if len(some_list1) == 1:
         text1 = text1 + str(some_list1[0])
